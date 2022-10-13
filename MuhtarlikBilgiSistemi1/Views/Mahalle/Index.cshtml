@@ -1,0 +1,59 @@
+﻿@using EntityLayer.Concrete
+@model List<Mahalle>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+
+<table class="table table-hover">
+
+
+    @foreach (var item in Model)
+    {
+
+
+
+        <tr>
+
+            <th> Mahalle Adı: </th>
+            <td>@item.MahalleAdi</td>
+            <td><a href="/Mahalle/MahalleUpdate/@item.MahalleId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Mahalle/DeleteMahalle/@item.MahalleId" class="btn btn-danger">Sil</a></td>
+
+
+        </tr>
+        <tr>
+            <th>  İl: </th>
+            <td>@item.il</td>
+            <td><a href="/Mahalle/MahalleUpdate/@item.MahalleId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Mahalle/DeleteMahalle/@item.MahalleId" class="btn btn-danger">Sil</a></td>
+
+        </tr>
+        <tr>
+            <th>  İlçe: </th>
+            <td>@item.ilce</td>
+            <td><a href="/Mahalle/MahalleUpdate/@item.MahalleId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Mahalle/DeleteMahalle/@item.MahalleId" class="btn btn-danger">Sil</a></td>
+        </tr>
+        <tr>
+            <th> Konum: </th>
+            <td>@item.Konum</td>
+            <td><a href="/Mahalle/MahalleUpdate/@item.MahalleId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Mahalle/DeleteMahalle/@item.MahalleId" class="btn btn-danger">Sil</a></td>
+        </tr>
+        <tr>
+            <th> Yüz Ölçümü: </th>
+            <td>@item.YuzOlcumu</td>
+            <td><a href="/Mahalle/MahalleUpdate/@item.MahalleId" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Mahalle/DeleteMahalle/@item.MahalleId" class="btn btn-danger">Sil</a></td>
+        </tr>
+        <tr>   
+            <td><a href="/Mahalle/AddMahalle/@item.MahalleId" class="btn btn-success">Ekle</a></td>
+        </tr>
+
+    }
+</table>

@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.OnemliMekanlar
+@{
+    ViewBag.Title = "UpdateOnemliMekanlar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+@using (Html.BeginForm("UpdateOnemliMekanlar", "AAOnemliMekanlar", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.MahalleId)
+        @Html.HiddenFor(x => x.OnemliMekanlarId)
+
+        <br />
+        @Html.Label("Adı")
+        @Html.TextBoxFor(x => x.Adi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yapı Tipi")
+        @Html.TextBoxFor(x => x.YapiTipi, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+}
+

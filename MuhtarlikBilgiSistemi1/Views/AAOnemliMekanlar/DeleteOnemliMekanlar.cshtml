@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.OnemliMekanlar
+@{
+    ViewBag.Title = "DeleteOnemliMekanlar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>DeleteOnemliMekanlar</h2>
+<br />
+@using (Html.BeginForm("DeleteOnemliMekanlar", "AAOnemliMekanlar", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.MahalleId)
+        @Html.HiddenFor(x => x.OnemliMekanlarId)
+
+        <br />
+        @Html.Label("Adı")
+        @Html.TextBoxFor(x => x.Adi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yapı Tipi")
+        @Html.TextBoxFor(x => x.YapiTipi, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Sil</button>
+
+    </div>
+}
+
+

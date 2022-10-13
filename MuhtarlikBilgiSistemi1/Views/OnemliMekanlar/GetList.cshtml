@@ -1,0 +1,27 @@
+﻿@using EntityLayer.Concrete
+@model List<OnemliMekanlar>
+
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Adı</th>
+        <th>Yapı Tipi</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.OnemliMekanlarId</td>
+            <td>@item.MahalleId</td>
+            <td>@item.Adi</td>
+            <td>@item.YapiTipi</td>
+
+        </tr>
+    }
+</table>
+<a href="/OnemliMekanlar/AddOnemliMekanlar" class="btn btn-info">Yeni Kategori</a> 

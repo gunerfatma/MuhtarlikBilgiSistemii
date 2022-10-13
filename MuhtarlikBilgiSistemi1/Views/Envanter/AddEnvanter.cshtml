@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Envanter
+@{
+
+    ViewBag.Title = "AddEnvanter";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1>Yeni kategori ekleme sayfası</h1>
+<br/>
+
+@using (Html.BeginForm("AddEnvanter", "Envanter", FormMethod.Post))
+{
+                <div class="form-group">
+                    <br />
+                    @Html.HiddenFor(x => x.EnvanterId)
+                    @Html.HiddenFor(x => x.MahalleId)
+                    <br />
+                    @Html.Label("Başlık")
+                    @Html.TextBoxFor(x => x.Baslik1, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Baslik1)
+                    <br />
+                    @Html.Label("Durum")
+                    @Html.TextAreaFor(x => x.Durum1, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Durum1)
+                    <br />
+                    @**<a href="/Envanter/AddEnvanter" class="btn btn-danger">Ekle</a>*@
+                    <button class="btn btn-success">Ekle</button>
+                </div>
+            }

@@ -1,0 +1,97 @@
+﻿@using EntityLayer.Concrete
+@model List<Envanter>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <table style="width:75%">
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <th>  Nüfus: </th>
+                <th>@item.Nufus</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+
+            </tr>
+            <tr>
+                <th>  Bina Sayısı: </th>
+                <th>@item.BinaSayisi</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+                <th>  Hane Sayısı: </th>
+                <th>@item.HaneSayisi</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+                <th>  Yol Ağı Uzunluğu </th>
+                <th>@item.YolAgiUzunlugu</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+                <th>  Okul Sayısı: </th>
+                <th>@item.OkulSayisi</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+                <th>  Erkek Nüfus: </th>
+                <th>@item.ErkekNufus</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+
+                <th>  Kadın Nüfus: </th>
+                <th>@item.KadinNufus</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+                <th>  AVM Sayısı: </th>
+                <th>@item.AVMSayisi</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+                <th>  Yol Yapı Sayısı: </th>
+                <th>@item.YolYapiSayisi</th>
+                <td><a href="/Envanter/UpdateEnvanter/@item.EnvanterId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Envanter/DeleteEnvanter/@item.EnvanterId" class="btn btn-success">Sil</a></td>
+            </tr>
+            <tr>
+
+                <td><a href="/Envanter/AddEnvanter/@item.EnvanterId" class="btn btn-danger">Ekle</a></td>
+            </tr>
+        }
+
+    </table>
+    @*<a href="/Envanter/AddEnvanter" class="btn btn-danger">Ekle</a>*@
+
+
+</body>
+</html>

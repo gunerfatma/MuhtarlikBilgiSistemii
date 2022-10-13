@@ -1,0 +1,46 @@
+﻿@model EntityLayer.Concrete.Hizmetler
+@{
+    ViewBag.Title = "AddHizmetler1";
+    Layout = "~/Views/Shared/_MuhtarLayout.cshtml";
+}
+
+<h2>Ekleme Sayfası</h2>
+
+
+@using (Html.BeginForm("AddHizmetler1", "MuhtarHizmet", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.HizmetId)
+        @Html.HiddenFor(x => x.MuhtarId)
+
+        <br />
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Baslik)
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Aciklama)
+        <br />
+        <br />
+        @Html.Label("Durum")
+        @Html.TextAreaFor(x => x.Durum, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Durum)
+        <br />
+        @Html.Label("Maliyet")
+        @Html.TextAreaFor(x => x.Maliyet, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Maliyet)
+        <br />
+        @Html.Label("Muhtar Adı Soyadı")
+        @Html.TextAreaFor(x => x.MuhtarAdiSoyadi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.MuhtarAdiSoyadi)
+        <br />
+        @Html.Label("Giriş Tarihi")
+        @Html.TextAreaFor(x => x.MuhtarGirisTarihi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.MuhtarGirisTarihi)
+        <br />
+        <button class="btn btn-info">Kaydet</button>
+    </div>
+}
+
+

@@ -1,0 +1,38 @@
+﻿   @model EntityLayer.Concrete.Mahalle
+    @{
+        ViewBag.Title = "DeleteMahalle";
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+
+    <br />
+    @using (Html.BeginForm("DeleteMahalle", "Mahalle", FormMethod.Post))
+    {
+        <div class="form-group">
+
+            @Html.HiddenFor(x => x.MahalleId)
+            @Html.HiddenFor(x => x.MuhtarId)
+            <br />
+            @Html.Label("Mahalle Adı")
+            @Html.TextBoxFor(x => x.MahalleAdi, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.MahalleAdi)
+            <br />
+            @Html.Label("il")
+            @Html.TextBoxFor(x => x.il, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.il)
+            <br />
+            @Html.Label("İlçe")
+            @Html.TextBoxFor(x => x.ilce, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.ilce)
+            <br />
+            @Html.Label("Konum")
+            @Html.TextBoxFor(x => x.Konum, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Konum)
+            <br />
+            @Html.Label("Yüz Ölçümü")
+            @Html.TextBoxFor(x => x.YuzOlcumu, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.YuzOlcumu)
+            <br />
+            <button class="btn btn-info"> Sil</button>
+        </div>
+    }
+

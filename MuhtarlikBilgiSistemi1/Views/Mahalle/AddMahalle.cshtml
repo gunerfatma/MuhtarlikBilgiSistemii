@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Mahalle
+@{
+    ViewBag.Title = "AddMahalle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+
+@using (Html.BeginForm("AddMahalle", "Mahalle", FormMethod.Post))
+{
+    <div class="form-group">
+
+
+        @Html.HiddenFor(x => x.MahalleId)
+        @Html.HiddenFor(x => x.MuhtarId)
+        <br />
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Baslik2, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Baslik2)
+        <br />
+        @Html.Label("Durum")
+        @Html.TextBoxFor(x => x.Durum2, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Durum2)
+       <br />
+        <button class="btn btn-info">Ekle</button>
+
+
+    </div>
+}

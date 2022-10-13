@@ -1,0 +1,66 @@
+﻿@model EntityLayer.Concrete.Muhtar
+@{
+    ViewBag.Title = "AddMuhtar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddMuhtar</h2>
+<br/>
+
+@using(Html.BeginForm("AddMuhtar", "AdminMuhtar", FormMethod.Post))
+{
+                    <div class="form-group">
+                       
+                       
+                        @Html.HiddenFor(x => x.MuhtarId)
+                        <br />
+                        @Html.Label("Muhtar Adı")
+                        @Html.TextBoxFor(x => x.Adi, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Adi)
+                        <br />
+                        @Html.Label("Muhtar Soyadı")
+                        @Html.TextBoxFor(x => x.Soyadi, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Soyadi)
+                        <br />
+                        @Html.Label("Muhtar Tc")
+                        @Html.TextBoxFor(x => x.TC, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.TC)
+                        <br />
+                        @Html.Label("Muhtar Telefon")
+                        @Html.TextBoxFor(x => x.TelNo, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.TelNo)
+                        <br />
+                        @Html.Label("Muhtar Görsel Linki")
+                        @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Image)
+                        <br />
+                        @Html.Label("Muhtar Adres")
+                        @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Adres)
+                        <br />
+                        @Html.Label("Muhtar Doğum Tarihi")
+                        @Html.TextBoxFor(x => x.DogumTarihi, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.DogumTarihi)
+                        <br />
+                        @Html.Label("Muhtar Seçilme Yılı")
+                        @Html.TextBoxFor(x => x.SecilmeYili, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.SecilmeYili)
+                        <br />
+                        @Html.Label("Muhtar Görev Süresi")
+                        @Html.TextBoxFor(x => x.GorevSuresi, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.GorevSuresi)
+                        <br />
+                        @Html.Label("Muhtar Mail")
+                        @Html.TextBoxFor(x => x.Eposta, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Eposta)
+                        <br />
+                        @Html.Label("Muhtar Şifre")
+                        @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Sifre)
+                        <br />
+                        <button class="btn btn-info">Ekle</button>
+
+
+                    </div>
+            }
+

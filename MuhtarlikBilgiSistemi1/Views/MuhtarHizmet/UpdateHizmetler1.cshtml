@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.Hizmetler
+@{
+    ViewBag.Title = "UpdateHizmetler1";
+    Layout = "~/Views/Shared/_MuhtarLayout.cshtml";
+}
+
+<h2>Envanter güncelleme Sayfası</h2>
+
+
+@using (Html.BeginForm("UpdateHizmetler1", "MuhtarHizmet", FormMethod.Post))
+{
+
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.HizmetId)
+        @Html.HiddenFor(x => x.MuhtarId)
+
+        @Html.Label("Başlık:")
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        <br />
+        @Html.Label("Açıklama:")
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+        <br />
+        @Html.Label(" Durum:")
+        @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+        <br />
+        @Html.Label("Maliyet:")
+        @Html.TextBoxFor(x => x.Maliyet, new { @class = "form-control" })
+        <br />
+        @Html.Label("Muhtar Adı Soyadı:")
+        @Html.TextBoxFor(x => x.MuhtarAdiSoyadi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Giriş Tarihi:")
+        @Html.TextBoxFor(x => x.MuhtarGirisTarihi, new { @class = "form-control" })
+        <br /><br />
+        <button class="btn btn-success">Kaydet</button>
+
+
+    </div>
+}
+
+
+

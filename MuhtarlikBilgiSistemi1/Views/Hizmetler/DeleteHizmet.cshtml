@@ -1,0 +1,58 @@
+﻿@model EntityLayer.Concrete.Hizmetler
+@{
+    ViewBag.Title = "DeleteHizmet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("DeleteHizmet", "Hizmetler", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.HizmetId)
+        @Html.HiddenFor(x => x.MuhtarId)
+
+        @Html.Label("Başlık:")
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        <br />
+        @Html.Label("Açıklama:")
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+        <br />
+        @Html.Label(" Durum:")
+        @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
+        <br />
+        @Html.Label("Maliyet:")
+        @Html.TextBoxFor(x => x.Maliyet, new { @class = "form-control" })
+        <br />
+        @Html.Label("Muhtar Adı Soyadı:")
+        @Html.TextBoxFor(x => x.MuhtarAdiSoyadi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Giriş Tarihi:")
+        @Html.TextBoxFor(x => x.MuhtarGirisTarihi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel Adı Soyadı:")
+        @Html.TextBoxFor(x => x.DevamEdenPersonelAdiSoyadi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Maliyet Tutarı:")
+        @Html.TextBoxFor(x => x.MaliyetTutari, new { @class = "form-control" })
+        <br />
+        @Html.Label("Giriş Tarihi:")
+        @Html.TextBoxFor(x => x.BelediyeGirisTarihi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Maliyet Tutarı:")
+        @Html.TextBoxFor(x => x.MaliyetTutari, new { @class = "form-control" })
+        <br />
+        @Html.Label("Giriş Tarihi:")
+        @Html.TextBoxFor(x => x.BelediyeGirisTarihi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Personel Adı Soyadı:")
+        @Html.TextBoxFor(x => x.TamamlandiPersonelAdiSoyadi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Bitş Tarihi:")
+        @Html.TextBoxFor(x => x.TamamlandiBitisTarihi, new { @class = "form-control" })
+        <br /><br />
+
+        <button class="btn btn-info">Sil</button>
+    </div>
+}
+

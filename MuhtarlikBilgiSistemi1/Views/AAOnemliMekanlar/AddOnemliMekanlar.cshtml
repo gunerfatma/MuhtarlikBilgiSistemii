@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.OnemliMekanlar
+
+@{
+    ViewBag.Title = "AddOnemliMekanlar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Kategori Ekleme Sayfası</h1>
+<br />
+@using (Html.BeginForm("AddOnemliMekanlar", "AAOnemliMekanlar", FormMethod.Post))
+{
+    <div class="form-group">
+        @*<input type="text" name="OnemliMekanlarId" value="@ViewBag.d"/>*@
+
+
+        <br />
+        @Html.HiddenFor(x => x.MahalleId)
+        @Html.HiddenFor(x => x.OnemliMekanlarId)
+        <br />
+        @Html.Label("Adı")
+        @Html.TextBoxFor(x => x.Adi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Adi)
+        <br />
+        @Html.Label("Yapı Tipi")
+        @Html.TextAreaFor(x => x.YapiTipi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.YapiTipi)
+        <br />
+        <button class="btn btn-info">Kaydet</button>
+    </div>
+}

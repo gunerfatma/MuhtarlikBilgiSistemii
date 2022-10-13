@@ -1,0 +1,64 @@
+﻿@model EntityLayer.Concrete.Muhtar
+@{
+    ViewBag.Title = "UpdateMuhtar";
+    Layout = "~/Views/Shared/_MuhtarLayout.cshtml";
+}
+
+<br />
+<h2>Muhtar düzenleme sayfası</h2>
+
+@using (Html.BeginForm("MuhtarUpdate1", "MuhtarMuhtar", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.MuhtarId)
+        <br />
+        @Html.Label("Adı")
+        @Html.TextBoxFor(x => x.Adi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Adi)
+        <br />
+        @Html.Label("Soyadı")
+        @Html.TextBoxFor(x => x.Soyadi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Soyadi)
+        <br />
+        @Html.Label("Tc")
+        @Html.TextBoxFor(x => x.TC, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.TC)
+        <br />
+        @Html.Label("Telefon")
+        @Html.TextBoxFor(x => x.TelNo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.TelNo)
+        <br />
+        @Html.Label("Görsel Linki")
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Image)
+        <br />
+        @Html.Label("Adres")
+        @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Adres)
+        <br />
+        @Html.Label("Doğum Tarihi")
+        @Html.TextBoxFor(x => x.DogumTarihi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.DogumTarihi)
+        <br />
+        @Html.Label("Seçilme Yılı")
+        @Html.TextBoxFor(x => x.SecilmeYili, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SecilmeYili)
+        <br />
+        @Html.Label("Görev Süresi")
+        @Html.TextBoxFor(x => x.GorevSuresi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.GorevSuresi)
+        <br />
+        @Html.Label("Mail")
+        @Html.TextBoxFor(x => x.Eposta, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Eposta)
+        <br />
+        @Html.Label("Şifre")
+        @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Sifre)
+        <br />
+        <button class="btn btn-info"> Güncelle</button>
+    </div>
+}
+
+

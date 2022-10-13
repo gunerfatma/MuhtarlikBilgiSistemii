@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model List<OnemliMekanlar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MuhtarLayout.cshtml";
+}
+
+<table class="table table-hover">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>Adı</th>
+            <th>@item.Adi</th>
+            <th>Yapı Tipi</th>
+            <td>@item.YapiTipi</td>
+
+           
+            <td><a href="/MuhtarÖnemliMekanlar/UpdateOnemliMekanlar1/@item.OnemliMekanlarId" class="btn btn-warning">Güncelle</a></td>
+            @*<td><a href="#" class="btn btn-primary">Başlıklar</a></td>*@
+        </tr>
+    }
+</table>
+<a href="/MuhtarÖnemliMekanlar/AddOnemliMekanlar1" class="btn btn-info">Yeni Kategori</a>
+
+

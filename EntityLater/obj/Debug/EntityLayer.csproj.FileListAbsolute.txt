@@ -1,0 +1,12 @@
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\bin\Debug\EntityLater.dll.config
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\bin\Debug\EntityLater.dll
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\bin\Debug\EntityLater.pdb
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\bin\Debug\EntityFramework.dll
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\bin\Debug\EntityFramework.xml
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\obj\Debug\EntityLater.dll
+C:\Users\guner\source\repos\MuhtarlikBilgiSistemi1\EntityLater\obj\Debug\EntityLater.pdb

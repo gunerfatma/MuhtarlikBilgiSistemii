@@ -1,0 +1,33 @@
+﻿@using EntityLayer.Concrete
+@model List<OnemliMekanlar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-hover">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>Adı</th>
+            <td>@item.Adi</td>
+            <th>Yapı Tipi</th>
+            <td>@item.YapiTipi</td>
+
+            <td><a href="/AAOnemliMekanlar/DeleteOnemliMekanlar/@item.OnemliMekanlarId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/AAOnemliMekanlar/UpdateOnemliMekanlar/@item.OnemliMekanlarId" class="btn btn-warning">Güncelle</a></td>
+            @*<td><a href="#" class="btn btn-primary">Başlıklar</a></td>*@
+
+        </tr>
+
+    }
+
+
+</table>
+<a href="/AAOnemliMekanlar/AddOnemliMekanlar" class="btn btn-info">Yeni Kategori</a>
+
+
+
+
+

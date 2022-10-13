@@ -1,0 +1,155 @@
+﻿@using EntityLayer.Concrete
+@model List<Hizmetler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MuhtarLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .kutu {
+            width: 975px;
+            height: 250px;
+            border: 1px solid #000;
+            background-color: #f8f8ff;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <!-- Default box -->
+
+        <div class="card card-solid">
+            <div class="card-body pb-0">
+                <div class="row d-flex align-items-stretch">
+                    <table style="width:75%">
+
+                        @foreach (var item in Model)
+                        {
+
+                            <div class="kutu">
+
+                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                                    <div class="card bg-light">
+
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-7">
+
+
+
+                                                    <p class="text-muted text-sm"><b>Başlık: </b>@item.Baslik</p>
+                                                    <p class="text-muted text-sm"><b>Açıklama: </b>@item.Aciklama  </p>
+                                                    <p class="text-muted text-sm"><b>Durum: </b>@item.Durum </p>
+                                                    <p class="text-muted text-sm"><b>Maliyet: </b>@item.Maliyet </p>
+
+
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br />
+                                        <div class="card-footer">
+                                            <div class="text-left">
+
+                                                <a href="/MuhtarHizmet/UpdateHizmetler1/@item.HizmetId" class="btn btn-m  btn-success">
+                                                    <i class="fas fa-user"></i>Güncelle
+
+
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                                            <div class="timeline-step">
+                                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" @*title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003"*@>
+                                                    <div class="inner-circle"></div>
+                                                    <p class="h6 mt-3 mb-1">Gereksinimler</p>
+                                                    <p class="h6 text-muted mb-0 mb-lg-0"><b>Muhtar Adı Soyadı:</b>@item.MuhtarAdiSoyadi</p>
+                                                    <p class="h6 text-muted mb-0 mb-lg-0"><b>Giriş Tarihi:</b>@item.MuhtarGirisTarihi </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-step">
+                                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" @*title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004*@>
+                                                    <div class="inner-circle"></div>
+                                                    <p class="h6 mt-3 mb-1">Devam Ediyor</p>
+                                                    <p class="h6 text-muted mb-0 mb-lg-0"><b>Personel Adı Soyadı:</b>@item.DevamEdenPersonelAdiSoyadi</p>
+                                                    <p class="h6 text-muted mb-0 mb-lg-0"><b> Maliyet Tutarı:</b>@item.MaliyetTutari</p>
+                                                    <p class="h6 text-muted mb-0 mb-lg-0"><b>Giriş Tarihi:</b>@item.BelediyeGirisTarihi</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-step">
+                                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" @*title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005"*@>
+                                                    <div class="inner-circle"></div>
+                                                    <p class="h6 mt-3 mb-1">Tamamlandı</p>
+                                                    <p class="h6 text-muted mb-0 mb-lg-0"><b>Personel Adı Soyadı:</b>@item.TamamlandiPersonelAdiSoyadi</p>
+                                                    <p class="h6 text-muted mb-0 mb-lg-0"><b>Bitiş Tarihi:</b>@item.TamamlandiBitisTarihi</p>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <br />
+
+
+                        }
+
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        @*<a href="/Hizmetler/AddHizmetler/@item.HizmetId" class="btn btn-m  btn-primary">*@
+        <a href="/MuhtarHizmet/AddHizmetler1" class="btn btn-primary">Ekle</a>
+
+
+
+
+
+
+
+    </section>
+
+
+</body>
+
+</html>
+
+
+
+
+

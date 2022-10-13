@@ -1,0 +1,47 @@
+﻿@using EntityLayer.Concrete
+@model List<Mahalle>
+@{
+    ViewBag.Title = "KullanıcıMahalle";
+    Layout = "~/Views/Shared/_KullanıcıLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-hover">
+
+
+    @foreach (var item in Model)
+    {
+
+
+
+        <tr>
+
+            <th> Mahalle Adı: </th>
+            <td>@item.MahalleAdi</td>
+
+
+        </tr>
+        <tr>
+            <th>  İl: </th>
+            <td>@item.il</td>
+
+        </tr>
+        <tr>
+            <th>  İlçe: </th>
+            <td>@item.ilce</td>
+        </tr>
+        <tr>
+            <th> Konum: </th>
+            <td>@item.Konum</td>
+        </tr>
+        <tr>
+            <th> Yüz Ölçümü: </th>
+            <td>@item.YuzOlcumu</td>
+
+        </tr>
+
+
+    }
+</table>
+

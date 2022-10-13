@@ -1,0 +1,56 @@
+﻿@model EntityLayer.Concrete.Envanter
+@{
+    ViewBag.Title = "UpdateEnvanter1";
+    Layout = "~/Views/Shared/_MuhtarLayout.cshtml";
+}
+
+
+
+<br />
+<h2>Envanter güncelleme Sayfası</h2>
+
+
+@using (Html.BeginForm("UpdateEnvanter1", "MuhtarEnvanter", FormMethod.Post))
+{
+
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.MahalleId)
+        @Html.HiddenFor(x => x.EnvanterId)
+
+        @Html.Label("Nüfus:")
+        @Html.TextBoxFor(x => x.Nufus, new { @class = "form-control" })
+
+        <br />
+        @Html.Label("Bina Sayısı:")
+        @Html.TextBoxFor(x => x.BinaSayisi, new { @class = "form-control" })
+        <br />
+        @Html.Label(" Hane Sayısı:")
+        @Html.TextBoxFor(x => x.HaneSayisi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yol Ağı Uzunluğı:")
+        @Html.TextBoxFor(x => x.YolAgiUzunlugu, new { @class = "form-control" })
+        <br />
+        @Html.Label("Okul Sayısı:")
+        @Html.TextBoxFor(x => x.OkulSayisi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Erkek Nüfus:")
+        @Html.TextBoxFor(x => x.ErkekNufus, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kadın Nüfus:")
+        @Html.TextBoxFor(x => x.KadinNufus, new { @class = "form-control" })
+        <br />
+        @Html.Label("AVM Sayısı:")
+        @Html.TextBoxFor(x => x.AVMSayisi, new { @class = "form-control" })
+        <br />
+        @Html.Label("Sosyal Yapı Sayısı:")
+        @Html.TextBoxFor(x => x.YolYapiSayisi, new { @class = "form-control" })
+        <br /><br />
+        <button class="btn btn-success">Güncelle</button>
+
+
+    </div>
+}
+
+
+

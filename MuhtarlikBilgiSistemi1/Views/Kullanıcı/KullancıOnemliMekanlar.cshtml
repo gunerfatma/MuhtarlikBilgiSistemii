@@ -1,0 +1,22 @@
+﻿@using EntityLayer.Concrete
+@model List<OnemliMekanlar>
+@{
+    ViewBag.Title = "KullancıOnemliMekanlar";
+    Layout = "~/Views/Shared/_KullanıcıLayout.cshtml";
+}
+
+<table class="table table-hover">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>Adı</th>
+            <th>@item.Adi</th>
+            <th>Yapı Tipi</th>
+            <td>@item.YapiTipi</td>
+
+
+        </tr>
+    }
+</table>
+

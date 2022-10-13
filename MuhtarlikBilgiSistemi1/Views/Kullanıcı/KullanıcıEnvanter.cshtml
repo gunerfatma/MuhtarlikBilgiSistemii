@@ -1,0 +1,84 @@
+﻿@using EntityLayer.Concrete
+@model List<Envanter>
+@{
+    ViewBag.Title = "KullanıcıEnvanter";
+    Layout = "~/Views/Shared/_KullanıcıLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <table style="width:75%">
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <th>  Nüfus: </th>
+                <th>@item.Nufus</th>
+              
+            </tr>
+            <tr>
+                <th>  Bina Sayısı: </th>
+                <th>@item.BinaSayisi</th>
+               
+            </tr>
+            <tr>
+                <th>  Hane Sayısı: </th>
+                <th>@item.HaneSayisi</th>
+                
+            </tr>
+            <tr>
+                <th>  Yol Ağı Uzunluğu </th>
+                <th>@item.YolAgiUzunlugu</th>
+                
+            </tr>
+            <tr>
+                <th>  Okul Sayısı: </th>
+                <th>@item.OkulSayisi</th>
+                
+            </tr>
+            <tr>
+                <th>  Erkek Nüfus: </th>
+                <th>@item.ErkekNufus</th>
+                
+            </tr>
+            <tr>
+
+                <th>  Kadın Nüfus: </th>
+                <th>@item.KadinNufus</th>
+               
+            </tr>
+            <tr>
+                <th>  AVM Sayısı: </th>
+                <th>@item.AVMSayisi</th>
+               
+            </tr>
+            <tr>
+                <th>  Yol Yapı Sayısı: </th>
+                <th>@item.YolYapiSayisi</th>
+                
+            </tr>
+           
+        }
+
+    </table>
+
+
+</body>
+</html>
+

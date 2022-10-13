@@ -1,0 +1,16 @@
+﻿@model EntityLayer.Concrete.Envanter
+@{
+    ViewBag.Title = "DeleteEnvanter";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("DeleteEnvanter", "Envanter", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.EnvanterId)
+        @Html.HiddenFor(x => x.MahalleId)
+
+
+    </div>
+}
+

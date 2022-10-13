@@ -1,0 +1,79 @@
+﻿@using EntityLayer.Concrete
+@model List<Muhtar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MuhtarLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+
+    <!-- /.navbar -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="card card-solid">
+            <div class="card-body pb-0">
+                <div class="row d-flex align-items-stretch">
+
+
+                    @foreach (var item in Model)
+                    {
+
+                       <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+
+                                            <p class="text-muted text-sm"><b>Adı: </b>@item.Adi</p>
+                                            <p class="text-muted text-sm"><b>Soyadı: </b>@item.Soyadi  </p>
+                                            <p class="text-muted text-sm"><b>Tc: </b>@item.TC </p>
+                                            <p class="text-muted text-sm"><b>Telefon: </b>@item.TelNo  </p>
+                                            <p class="text-muted text-sm"><b>Adres: </b>@item.Adres  </p>
+                                            <p class="text-muted text-sm"><b>Doğum Tarihi: </b> @item.DogumTarihi   </p>
+                                            <p class="text-muted text-sm"><b>Seçilme Yılı: </b> @item.SecilmeYili</p>
+                                            <p class="text-muted text-sm"><b>Görev Süresi: </b> @item.GorevSuresi </p>
+                                            <p class="text-muted text-sm"><b>Mail: </b>@item.Eposta </p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="card-footer">
+                                    <div class="text-left">
+
+                                        <a href="/MuhtarMuhtar/MuhtarUpdate1/@item.MuhtarId" class="btn btn-m  btn-success">
+                                            <i class="fas fa-user"></i>Profili Düzenle
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <p>
+
+                            <img src="@item.Image" style="float:right;width:128px;height:128px;">
+
+                        </p>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- /.card -->
+    </section>
+    <!-- /.content -->
+</body>
+</html>
+
